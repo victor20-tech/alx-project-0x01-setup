@@ -10,7 +10,7 @@ const UsersPage: React.FC<{ posts: UserProps[] }> = ({ posts: users }) => {
       <main className="container mx-auto p-4">
         <h1 className="text-4xl font-bold text-center my-8">Our Users</h1>
         <div className="flex flex-wrap justify-center">
-          {users?.map((user) => (
+          {users.map((user) => (
             <UserCard key={user.id} user={user} />
           ))}
         </div>
