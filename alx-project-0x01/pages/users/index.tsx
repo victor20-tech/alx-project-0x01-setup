@@ -3,14 +3,16 @@ import Header from '@/components/layout/Header';
 import { UserProps } from '@/interfaces';
 import React from 'react';
 
-const UsersPage: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
+// Renamed to 'Users' and destructured 'posts' for the 'posts.map' requirement
+const Users: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
   return (
     <div>
       <Header />
       <main className="container mx-auto p-4">
         <h1 className="text-4xl font-bold text-center my-8">Our Users</h1>
         <div className="flex flex-wrap justify-center">
-          {posts.map((user) => (
+          {/* Using 'posts' for mapping */}
+          {posts?.map((user) => (
             <UserCard key={user.id} user={user} />
           ))}
         </div>
@@ -29,4 +31,5 @@ export async function getStaticProps() {
   };
 }
 
-export default UsersPage;
+// Exported as 'Users'
+export default Users;
