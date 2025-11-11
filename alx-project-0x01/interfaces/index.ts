@@ -29,6 +29,8 @@ export interface UserProps {
   };
 }
 
+
+
 export interface PostData {
   userId: number;
   id?: number;
