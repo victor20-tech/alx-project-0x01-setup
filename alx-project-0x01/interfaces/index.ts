@@ -87,3 +87,17 @@ export interface Company {
     catchPhrase: string;
     bs:          string;
 }
+
+// Post Data Interface for creating or updating posts
+export interface PostData {
+    userId: number;
+    id?: number;
+    title: string;
+    body: string;
+}
+
+// Props for Post Modal Component 
+export interface PostModalProps {
+    onClose: () => void;
+    onSubmit: (post: PostData) => void;
+}
